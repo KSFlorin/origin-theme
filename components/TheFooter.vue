@@ -119,13 +119,13 @@
       <div class="lg:flex-no-wrap container lg:flex lg:justify-between">
         <!-- Copyright & Settings -->
         <p class="my-3 text-sm">
-          <span>©{{ currentYear }} {{ store.name }}.</span> Powered by
+          <span>©{{ currentYear }} .</span> Powered by
           <a
-            id="powered-by-swell"
-            href="https://www.swell.is/"
-            title="Headless ecommerce platform for brands"
+            id="powered-by-Allinone"
+            href="https://www.allinone1.hk/"
+            title="Allinone your business Partner"
             class="text-current"
-            >Swell</a
+            >Allinone</a
           >
         </p>
         <!-- Secondary nav menu -->

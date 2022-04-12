@@ -49,8 +49,24 @@
           <div
             class="container relative z-20 flex items-stretch justify-between"
           >
+
+            <!-- Mobile nav toggle2 -->
+             
+              <button
+                :class="{ 'is-active': mobileNavIsVisible }"
+                class="outline-none hamburger hamburger-squeeze relative ml-2 h-10 w-10 rounded p-1 lg:hidden"
+                type="button"
+                :aria-label="$t('navigation.menu')"
+                @click="setMobileNavVisibility"
+              >
+                <span class="center-xy relative h-6 w-6">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+
             <!-- Logo -->
             <div class="py-3 lg:w-1/4">
+
               <NuxtLink :to="localePath(resolveUrl({ type: 'home' }))">
                 <img
                   v-if="logoSrc"
@@ -65,6 +81,8 @@
                 }}</span>
               </NuxtLink>
             </div>
+
+      
 
             <!-- Main nav menu -->
             <nav v-if="menu" class="hidden w-full lg:flex lg:w-auto">
@@ -172,18 +190,7 @@
                   }}</span>
                 </div>
               </button>
-              <!-- Mobile nav toggle -->
-              <button
-                :class="{ 'is-active': mobileNavIsVisible }"
-                class="outline-none hamburger hamburger-squeeze relative ml-2 h-10 w-10 rounded p-1 lg:hidden"
-                type="button"
-                :aria-label="$t('navigation.menu')"
-                @click="setMobileNavVisibility"
-              >
-                <span class="center-xy absolute h-6 w-6">
-                  <span class="hamburger-inner"></span>
-                </span>
-              </button>
+           
             </div>
           </div>
         </header>

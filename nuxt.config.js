@@ -106,6 +106,60 @@ export default async () => {
       '@nuxtjs/sitemap',
     ],
 
+
+
+__dangerouslyDisableSanitizers: ['script', 'innerHTML'],
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' }
+    ],
+    script: [
+      {
+        hid: 'Rudder-JS',
+        src: 'https://cdn.rudderlabs.com/v1/rudder-analytics.min.js',
+        defer: true
+      },
+      {
+        hid: 'rudder-js',
+        innerHTML: `
+        rudderanalytics = window.rudderanalytics = [];
+        var  methods = [
+            'load',
+            'page',
+            'track',
+            'identify',
+            'alias',
+            'group',
+            'ready',
+            'reset',
+            'getAnonymousId',
+            'setAnonymousId'
+        ];
+    
+        for (var i = 0; i < methods.length; i++) {
+              var method = methods[i];
+              rudderanalytics[method] = function (methodName) {
+                    return function () {
+                          rudderanalytics.push([methodName].concat(Array.prototype.slice.call(arguments)));
+                    };
+                  }(method);
+        }
+        rudderanalytics.load("27fpNgExTN9kbuUYVElceNUQChH", "https://florinsteybg.dataplane.rudderstack.com");
+        rudderanalytics.ready(()=>{
+          console.log("We are all set");
+        });
+        rudderanalytics.page();
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8'
+      }
+    ],
+
+
+
+
+
     buildModules: [
       // https://go.nuxtjs.dev/eslint
       '@nuxtjs/eslint-module',
