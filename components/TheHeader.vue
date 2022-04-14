@@ -60,7 +60,8 @@
                 @click="setMobileNavVisibility"
               >
                 <span class="center-xy relative h-6 w-6">
-                  <span class="hamburger-inner"></span>
+                  <span class=""></span>
+                  Menu
                 </span>
               </button>
 
