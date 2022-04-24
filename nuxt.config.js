@@ -75,38 +75,6 @@ export default async () => {
       { src: '~/plugins/swell-lang.js' },
     ],
 
-    /*
-     ** Nuxt.js modules
-     */
-    modules: [
-      ['@nuxtjs/gtm'],
-
-      // [
-      //   '@nuxtjs/sentry',
-      //   /*
-      //    ** Logs app errors with Sentry's browser and node SDKs.
-      //    *
-      //    *  You can use environment variables or the object below to set config options.
-      //    *  See https://github.com/nuxt-community/sentry-module for all available
-      //    *  options, defaults, and environment variables.
-      //    */
-      //   {
-      //     // dsn: '', // or SENTRY_DSN in .env
-      //     // config: {}
-      //   },
-      // ],
-
-      /*
-       ** Generates a sitemap.xml
-       *
-       *  Automatically generate or serve dynamic sitemap.xml for Nuxt projects!
-       *  See https://github.com/nuxt-community/sentry-module for all available
-       *  options, defaults, and environment variables.
-       */
-      '@nuxtjs/sitemap',
-    ],
-
-
 
     script: [{
       hid: 'Rudder-JS',
@@ -147,6 +115,53 @@ export default async () => {
       charset: 'utf-8'
     }
   ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     ** Nuxt.js modules
+     */
+    modules: [
+      ['@nuxtjs/gtm'],
+
+      // [
+      //   '@nuxtjs/sentry',
+      //   /*
+      //    ** Logs app errors with Sentry's browser and node SDKs.
+      //    *
+      //    *  You can use environment variables or the object below to set config options.
+      //    *  See https://github.com/nuxt-community/sentry-module for all available
+      //    *  options, defaults, and environment variables.
+      //    */
+      //   {
+      //     // dsn: '', // or SENTRY_DSN in .env
+      //     // config: {}
+      //   },
+      // ],
+
+      /*
+       ** Generates a sitemap.xml
+       *
+       *  Automatically generate or serve dynamic sitemap.xml for Nuxt projects!
+       *  See https://github.com/nuxt-community/sentry-module for all available
+       *  options, defaults, and environment variables.
+       */
+      '@nuxtjs/sitemap',
+    ],
+
+
+
 
 
 
